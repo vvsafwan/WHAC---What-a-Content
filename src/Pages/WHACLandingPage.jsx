@@ -22,6 +22,7 @@ import client_07 from "../assets/images/WHACLandingPage/client_07.png";
 import client_08 from "../assets/images/WHACLandingPage/client_08.png";
 import logo from "../assets/images/WHACLandingPage/logo_white.png";
 import menu from "../assets/images/WHACLandingPage/menu_icon.png";
+import arrow from "../assets/images/WHACLandingPage/arrow.png";
 import {
     FaInstagram,
     FaFacebookF,
@@ -122,7 +123,7 @@ export default function WHACLandingPage() {
                     <p>We hire big talent and bring them big opportunities that build boundless careers.</p>
                     <br />
                     <p>Want to Do Content That Matters?</p>
-                    <button className="border-3 border-white py-4 px-20 md:px-15 lg:px-20 mt-10 rounded-full font-magnetik-semibold">CONTACT US</button>
+                    <button className="border-3 border-white py-4 px-20 md:px-15 lg:px-20 mt-10 rounded-full font-magnetik-semibold hover:bg-white hover:text-black hover:scale-105 transition-all ease-in-out duration-300 hover:cursor-pointer">CONTACT US</button>
                 </div>
             </div>
 
@@ -135,7 +136,7 @@ export default function WHACLandingPage() {
                     {works.map((item, index) => (
                         <div
                             key={index}
-                            className="overflow-hidden transition w-full h-full relative px-20 md:px-0 pt-2 md:pt-0"
+                            className="overflow-hidden transition-all ease-in-out duration-300 w-full h-full px-10 md:px-0 pt-2 md:pt-0 hover:scale-102 hover:opacity-80 cursor-pointer"
                         >
                             <div className="bg-gray-300">
                                 <img
@@ -144,8 +145,11 @@ export default function WHACLandingPage() {
                                     alt="Work Image"
                                 />
                             </div>
-                            <div className="p-4 font-medium absolute bottom-0">
-                                <p className="text-[3.5vw] md:text-[1.2vw] text-white font-magnetik-bold md:px-3">{item.title}</p>
+                            <div className="relative">
+                                <div className="p-4 font-medium absolute bottom-0 flex items-center justify-between w-full">
+                                    <p className="text-[3.5vw] md:text-[1.2vw] text-white font-magnetik-bold md:px-3">{item.title}</p>
+                                    <img src={arrow} alt="Arrow btn" />
+                                </div>
                             </div>
                         </div>
                     ))}
@@ -165,24 +169,6 @@ export default function WHACLandingPage() {
                     ))}
                 </div>
             </div>
-            {/* <div className="bg-white text-black px-6 md:px-20 py-16">
-                <h3 className="text-3xl font-bold mb-8">Network.</h3>
-                <div className="flex flex-wrap gap-10 items-center justify-center">
-                    {[
-                        "Futureace Healthcare Academy",
-                        "Flufftopia",
-                        "Seamantours",
-                        "FALAQ",
-                        "Mamma Mimmo's",
-                        "Serene Minds",
-                        "Grace Public School"
-                    ].map((name, index) => (
-                        <div key={index} className="text-center text-lg font-semibold">
-                            {name}
-                        </div>
-                    ))}
-                </div>
-            </div> */}
 
             {/* Footer */}
             <footer className="bg-[#00001A] text-white py-8">
