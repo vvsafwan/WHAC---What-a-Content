@@ -136,9 +136,9 @@ export default function WHACLandingPage() {
                     {works.map((item, index) => (
                         <div
                             key={index}
-                            className="overflow-hidden transition-all ease-in-out duration-300 w-full h-full px-10 md:px-0 pt-2 md:pt-0 hover:scale-102 hover:opacity-80 cursor-pointer"
+                            className="overflow-hidden w-full h-full px-10 md:px-0 pt-2 md:pt-0 hover:opacity-80 cursor-pointer"
                         >
-                            <div className="bg-gray-300">
+                            <div className="bg-gray-300 hover:scale-105 transition-all ease-in-out duration-300">
                                 <img
                                     className="w-full h-full object-cover"
                                     src={item.image}
