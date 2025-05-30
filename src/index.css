@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* @font-face {
+  font-family: 'Magnetik';
+  src: url('./assets/fonts/Magnetik-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'Magnetik-ExtraBold';
+  src: url('./assets/fonts/Magnetik-ExtraBold.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Magnetik-Bold';
+  src: url('./assets/fonts/Magnetik-Bold.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Magnetik-Thin';
+  src: url('./assets/fonts/Magnetik-Thin.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Magnetik-SemiBold';
+  src: url('./assets/fonts/Magnetik-SemiBold.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+.font-magnetik-extrabold {
+  font-family: 'Magnetik-ExtraBold';
+}
+
+.font-magnetik-bold {
+  font-family: 'Magnetik-Bold';
+}
+
+.font-magnetik-thin {
+  font-family: 'Magnetik-Thin';
+}
+
+.font-magnetik-semibold {
+  font-family: 'Magnetik-SemiBold';
+}
