@@ -88,30 +88,30 @@ export default function WHACLandingPage() {
             </div>
 
             {/* About Section */}
-            <div className="w-full h-screen bg-[#00001A] px-5 md:px-15 py-20 flex gap-10 justify-center items-center flex-col md:flex-row">
-                <div className="font-magnetik-extrabold">
-                    <div className="w-[55vw] flex">
-                        <div className="w-[60%]">
-                            <p className="text-[9vw] font-extrabold leading-tight">WE ARE</p>
+            <div className="w-full min-h-screen max-h-fit bg-[#00001A] px-5 md:px-15 py-20 flex gap-10 justify-center items-center flex-col md:flex-row">
+                <div className="font-magnetik-extrabold w-full">
+                    <div className="w-[100%] md:w-[55vw] flex">
+                        <div className="w-[65%] md:w-[60%]">
+                            <p className="text-[15vw] md:text-[9vw] font-extrabold leading-tight">WE ARE</p>
                         </div>
-                        <div className="w-[40%] flex items-center justify-center">
+                        <div className="w-[35%] md:w-[40%] flex items-center justify-center">
                             <img className="rounded object-cover w-full" src={interior} alt="" />
                         </div>
                     </div>
-                    <div className="w-[55vw] flex">
+                    <div className="w-[100%] md:w-[55vw] flex">
                         <div className="w-[50%] flex items-center justify-start">
                             <img className="rounded object-cover w-full" src={office} alt="" />
                         </div>
                         <div className="w-[50%] flex justify-end">
-                            <p className="text-[9vw] font-extrabold leading-tight">WHAC</p>
+                            <p className="text-[15vw] md:text-[9vw] font-extrabold leading-tight">WHAC</p>
                         </div>
                     </div>
-                    <div className="w-[55vw] flex justify-between">
+                    <div className="w-[100%] md:w-[55vw] flex justify-between">
                         <div className="w-[20%] flex items-center justify-start">
                             <img className="rounded object-cover w-full" src={thinkBigger} alt="" />
                         </div>
                         <div className="w-[75%] flex justify-end">
-                            <p className="text-[9vw] font-extrabold leading-tight">CONTENT <br /> MATTERS</p>
+                            <p className="text-[15vw] md:text-[9vw] font-extrabold leading-tight">CONTENT <br /> MATTERS</p>
                         </div>
                     </div>
                 </div>
