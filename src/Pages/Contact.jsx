@@ -9,7 +9,7 @@ export default function Contact() {
             <Navbar />
 
             {/* Content Section */}
-            <section className="w-10/12 md:w-9/12 py-12 mx-auto">
+            <section className="w-10/12 md:w-9/12 lg:w-8/12 py-12 mx-auto">
                 <div className='md:flex'>
                     <div className="w-full md:w-1/2">
                         <h2 className="text-[9vw] md:text-[4vw] font-bold mb-6 font-magnetik-extrabold">Let’s Talk</h2>
