@@ -1,3 +1,5 @@
 {
-  "routes": [{ "src": "/blog/(.*)", "dest": "/client/index.html" }]
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
 }
