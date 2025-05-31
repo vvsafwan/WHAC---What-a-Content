@@ -21,7 +21,7 @@ export default function About() {
             <Navbar />
 
             <section>
-                <div className="bg-white text-black py-10 flex flex-col md:flex-row">
+                <div className="bg-white text-black py-10 flex flex-col md:flex-row px-5 md:px-0">
                     <div className='hidden md:block'>
                         <h3 className="font-magnetik-extrabold text-[5vw] md:text-[3vw] font-bold md:rotate-270 md:mt-10 lg:mt-20 px-1 text-center md:text-left text-white">Welcome.</h3>
                     </div>
@@ -44,7 +44,7 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-                <div className="bg-white text-black flex flex-col md:flex-row">
+                <div className="bg-white text-black flex flex-col md:flex-row px-5 md:px-0">
                     <div>
                         <h3 className="font-magnetik-extrabold text-[5vw] md:text-[3vw] font-bold md:rotate-270 md:mt-10 lg:mt-20 px-1 text-center md:text-left text-white">Welcome.</h3>
                     </div>
