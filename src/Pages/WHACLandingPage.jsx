@@ -23,12 +23,7 @@ import client_08 from "../assets/images/WHACLandingPage/client_08.png";
 import logo from "../assets/images/WHACLandingPage/logo_white.png";
 import menu from "../assets/images/WHACLandingPage/menu_icon.png";
 import arrow from "../assets/images/WHACLandingPage/arrow.png";
-import {
-    FaInstagram,
-    FaFacebookF,
-    FaLinkedinIn,
-    FaYoutube
-} from "react-icons/fa";
+import Footer from "../Components/Footer";
 
 export default function WHACLandingPage() {
 
@@ -76,7 +71,7 @@ export default function WHACLandingPage() {
     return (
         <div className="bg-black text-white">
             {/* Hero Section */}
-            <div
+            <section
                 className="relative h-screen w-full bg-cover bg-center"
                 style={{ backgroundImage: `url(${homeBanner})` }}
             >
@@ -85,10 +80,10 @@ export default function WHACLandingPage() {
                     <img src={menu} alt="Menu" />
                 </div>
                 {/* <img className="h-full w-full object-cover" src={homeBanner} alt="" /> */}
-            </div>
+            </section>
 
             {/* About Section */}
-            <div className="w-full min-h-screen max-h-fit bg-[#00001A] px-5 md:px-15 py-20 flex gap-10 justify-center items-center flex-col md:flex-row">
+            <section className="w-full min-h-screen max-h-fit bg-[#00001A] px-5 md:px-15 py-20 flex gap-10 justify-center items-center flex-col md:flex-row">
                 <div className="font-magnetik-extrabold w-full">
                     <div className="w-[100%] md:w-[55vw] flex">
                         <div className="w-[65%] md:w-[60%]">
@@ -111,7 +106,7 @@ export default function WHACLandingPage() {
                             <img className="rounded object-cover w-full" src={thinkBigger} alt="" />
                         </div>
                         <div className="w-[75%] flex justify-end">
-                            <p className="text-[15vw] md:text-[9vw] font-extrabold leading-tight">CONTENT <br /> MATTERS</p>
+                            <p className="text-[15vw] md:text-[9vw] font-extrabold leading-tight">CONTENT <br /> <span className="tracking-widest">MAKERS</span></p>
                         </div>
                     </div>
                 </div>
@@ -123,12 +118,12 @@ export default function WHACLandingPage() {
                     <p>We hire big talent and bring them big opportunities that build boundless careers.</p>
                     <br />
                     <p>Want to Do Content That Matters?</p>
-                    <button className="border-3 border-white py-4 px-20 md:px-15 lg:px-20 mt-10 rounded-full font-magnetik-semibold hover:bg-white hover:text-black hover:scale-105 transition-all ease-in-out duration-300 hover:cursor-pointer">CONTACT US</button>
+                    <button className="border-3 border-white py-4 px-20 md:px-10 lg:px-20 mt-10 rounded-full font-magnetik-semibold hover:bg-white hover:text-black hover:scale-105 transition-all ease-in-out duration-300 hover:cursor-pointer">CONTACT US</button>
                 </div>
-            </div>
+            </section>
 
             {/* Work Section */}
-            <div className="bg-white text-black pt-25 flex flex-col md:flex-row">
+            <section className="bg-white text-black pt-25 flex flex-col md:flex-row">
                 <div>
                     <h3 className="font-magnetik-extrabold text-[5vw] md:text-[3vw] font-bold mb-8 md:rotate-270 md:mt-5 px-10 text-center md:text-left">Work.</h3>
                 </div>
@@ -154,10 +149,10 @@ export default function WHACLandingPage() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </section>
 
             {/* Network Section */}
-            <div className="bg-white text-black py-30 flex flex-col md:flex-row">
+            <section className="bg-white text-black py-30 flex flex-col md:flex-row">
                 <div>
                     <h3 className="font-magnetik-extrabold text-[5vw] md:text-[3vw] font-bold md:rotate-270 md:mt-10 lg:mt-20 px-1 text-center md:text-left">Network.</h3>
                 </div>
@@ -168,27 +163,9 @@ export default function WHACLandingPage() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </section>
 
-            {/* Footer */}
-            <footer className="bg-[#00001A] text-white py-8">
-                <div className="flex flex-col md:flex-row items-center justify-between w-6/9 mx-auto">
-                    <div className="text-sm">
-                        <p className="font-magnetik-bold">WHAC CREATIVE AGENCY</p>
-                        <br />
-                        <p className="font-magnetik-regular pb-10 md:pb-0">BEACH ROAD, CALICUT</p>
-                        </div>
-                    <div>
-                        <p className="font-magnetik-semibold text-sm mb-5 text-center md:text-left">CONNECT</p>
-                        <div className="flex space-x-4 mt-4 md:mt-0">
-                        <a className="border border-white p-3 rounded-full" href="#"><FaInstagram /></a>
-                        <a className="border border-white p-3 rounded-full" href="#"><FaFacebookF /></a>
-                        <a className="border border-white p-3 rounded-full" href="#"><FaLinkedinIn /></a>
-                        <a className="border border-white p-3 rounded-full" href="#"><FaYoutube /></a>
-                    </div>
-                    </div>
-                </div>
-            </footer>
+           <Footer />
         </div>
     );
 }
