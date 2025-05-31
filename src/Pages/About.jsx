@@ -31,7 +31,7 @@ export default function About() {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 w-full px-5 gap-10">
                             <div>
-                                <div className='font-magnetik-extralight text-[1rem] md:text-[1.2rem] lg:text-[1.5rem]'>
+                                <div className='font-magnetik-extralight text-[1rem] md:text-[1.2rem] lg:text-[1.4rem]'>
                                     <p className="py-5">
                                         At WHAC, we believe everything begins with content. It’s the voice behind every brand, the emotion behind every message, and the fuel for every digital experience.
                                     </p>
@@ -40,7 +40,9 @@ export default function About() {
                                     </p>    
                                 </div>
                             </div>
-                            <img className="w-full h-full object-cover" src={about01} alt="About_01" />
+                            <div className='w-full h-auto xl:h-[400px] overflow-hidden'>
+                                <img className="w-full h-full object-cover" src={about01} alt="About_01" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -49,10 +51,12 @@ export default function About() {
                         <h3 className="font-magnetik-extrabold text-[5vw] md:text-[3vw] font-bold md:rotate-270 md:mt-10 lg:mt-20 px-1 text-center md:text-left text-white">Welcome.</h3>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 w-full px-5 gap-10">
-                        <img className="w-full h-auto" src={about02} alt="About_01" />
+                         <div className='w-full h-auto xl:h-[400px] overflow-hidden'>
+                                <img className="w-full h-full object-cover" src={about02} alt="About_02" />
+                            </div>
                         <div className='py-5'>
                             {/* <h2 className="text-[3vw] font-bold mb-4 font-magnetik-extrabold">Welcome to the home of CreativeContent!</h2> */}
-                            <div className='font-magnetik-extralight text-[1rem] md:text-[1.2rem] lg:text-[1.5rem]'>
+                            <div className='font-magnetik-extralight text-[1rem] md:text-[1.2rem] lg:text-[1.4rem]'>
                                 <p className="mb-4">
                                     From social media to campaigns and brand narratives, we design content ecosystems that are as purposeful as they are powerful. We help businesses find their voice—and then make sure it’s heard, loud and clear.
                                 </p>
