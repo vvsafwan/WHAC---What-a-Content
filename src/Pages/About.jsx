@@ -27,11 +27,11 @@ export default function About() {
                     </div>
                     <div>
                         <div className='w-full md:w-1/2'>
-                            <h2 className="text-[8vw]/[9.5vw] md:text-[3.8vw]/[4.5vw] font-bold mb-4 font-magnetik-extrabold px-5">Welcome to the home of CreativeContent!</h2>
+                            <h2 className="text-[2rem]/[3rem] md:text-[2rem]/[2.5rem] lg:text-[3.5rem]/[4rem] font-bold mb-4 font-magnetik-extrabold px-5">Welcome to the home of CreativeContent!</h2>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 w-ful px-5 gap-10">
+                        <div className="grid grid-cols-1 md:grid-cols-2 w-full px-5 gap-10">
                             <div>
-                                <div className='font-magnetik-extralight text-[5vw] md:text-[1.5vw]'>
+                                <div className='font-magnetik-extralight text-[1rem] md:text-[1.2rem] lg:text-[1.5rem]'>
                                     <p className="py-5">
                                         At WHAC, we believe everything begins with content. It’s the voice behind every brand, the emotion behind every message, and the fuel for every digital experience.
                                     </p>
@@ -40,7 +40,7 @@ export default function About() {
                                     </p>    
                                 </div>
                             </div>
-                            <img className="w-full h-auto" src={about01} alt="About_01" />
+                            <img className="w-full h-full object-cover" src={about01} alt="About_01" />
                         </div>
                     </div>
                 </div>
@@ -48,11 +48,11 @@ export default function About() {
                     <div>
                         <h3 className="font-magnetik-extrabold text-[5vw] md:text-[3vw] font-bold md:rotate-270 md:mt-10 lg:mt-20 px-1 text-center md:text-left text-white">Welcome.</h3>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 w-ful px-5 gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 w-full px-5 gap-10">
                         <img className="w-full h-auto" src={about02} alt="About_01" />
                         <div className='py-5'>
                             {/* <h2 className="text-[3vw] font-bold mb-4 font-magnetik-extrabold">Welcome to the home of CreativeContent!</h2> */}
-                            <div className='font-magnetik-extralight text-[5vw] md:text-[1.5vw]'>
+                            <div className='font-magnetik-extralight text-[1rem] md:text-[1.2rem] lg:text-[1.5rem]'>
                                 <p className="mb-4">
                                     From social media to campaigns and brand narratives, we design content ecosystems that are as purposeful as they are powerful. We help businesses find their voice—and then make sure it’s heard, loud and clear.
                                 </p>
@@ -66,7 +66,7 @@ export default function About() {
             </section>
 
             {/* Network Section */}
-            <section className="bg-white text-black py-30 flex flex-col md:flex-row">
+            <section className="bg-white text-black py-20 flex flex-col md:flex-row">
                 <div>
                     <h3 className="font-magnetik-extrabold text-[5vw] md:text-[3vw] font-bold md:rotate-270 md:mt-20 lg:mt-30 text-center md:text-left">Our&nbsp;Clients.</h3>
                 </div>

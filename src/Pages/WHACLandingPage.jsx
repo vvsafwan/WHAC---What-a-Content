@@ -118,7 +118,7 @@ export default function WHACLandingPage() {
                     <p>We hire big talent and bring them big opportunities that build boundless careers.</p>
                     <br />
                     <p>Want to Do Content That Matters?</p>
-                    <button className="border-3 border-white py-4 px-20 md:px-10 lg:px-20 mt-10 rounded-full font-magnetik-semibold hover:bg-white hover:text-black hover:scale-105 transition-all ease-in-out duration-300 hover:cursor-pointer">CONTACT US</button>
+                    <button className="border-3 border-white py-4 px-20 md:px-10 lg:px-20 mt-10 rounded-full font-magnetik-semibold hover:bg-white hover:text-black hover:scale-105 transition-all ease-in-out duration-300 hover:cursor-pointer text-[1rem] lg:text-[1.5rem]">CONTACT US</button>
                 </div>
             </section>
 
