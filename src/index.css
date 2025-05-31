@@ -35,6 +35,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Magnetik-Regular';
+  src: url('./assets/fonts/Magnetik-Regular.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Magnetik-ExtraLight';
+  src: url('./assets/fonts/Magnetik-ExtraLight.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 
 .font-magnetik-extrabold {
   font-family: 'Magnetik-ExtraBold';
@@ -50,4 +64,12 @@
 
 .font-magnetik-semibold {
   font-family: 'Magnetik-SemiBold';
+}
+
+.font-magnetik-regular {
+  font-family: 'Magnetik-Regular';
+}
+
+.font-magnetik-extralight {
+  font-family: 'Magnetik-ExtraLight';
 }
