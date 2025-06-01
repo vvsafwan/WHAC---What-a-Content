@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import about01 from '../assets/images/About/about01.png'
 import about02 from '../assets/images/About/about02.png'
 import client_01 from "../assets/images/WHACLandingPage/client_01.png";
@@ -11,14 +11,21 @@ import client_07 from "../assets/images/WHACLandingPage/client_07.png";
 import client_08 from "../assets/images/WHACLandingPage/client_08.png";
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
+import MenuScreen from '../Components/MenuScreen';
 
 export default function About() {
+
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const clients = [client_01, client_02, client_03, client_04, client_05, client_06, client_07, client_08]
 
     return (
         <div className="font-sans text-gray-900">
-            <Navbar />
+            <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+
+            {menuOpen && (
+                <MenuScreen setMenuOpen={setMenuOpen} />
+            )}
 
             <section>
                 <div className="bg-white text-black py-10 flex flex-col md:flex-row px-5 md:px-0">
@@ -37,7 +44,7 @@ export default function About() {
                                     </p>
                                     <p>
                                         We’re not just a digital agency—we’re a content-first creative partner. Whether it’s strategy, storytelling, design, or delivery, we craft content that connects, informs, and inspires. Our work is grounded in the idea that great content doesn’t just fill space—it drives action, builds trust, and shapes perception.
-                                    </p>    
+                                    </p>
                                 </div>
                             </div>
                             <div className='w-full h-auto xl:h-[400px] overflow-hidden'>
@@ -51,9 +58,9 @@ export default function About() {
                         <h3 className="font-magnetik-extrabold text-[5vw] md:text-[3vw] font-bold md:rotate-270 md:mt-10 lg:mt-20 px-1 text-center md:text-left text-white">Welcome.</h3>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 w-full px-5 gap-10">
-                         <div className='w-full h-auto xl:h-[400px] overflow-hidden'>
-                                <img className="w-full h-full object-cover" src={about02} alt="About_02" />
-                            </div>
+                        <div className='w-full h-auto xl:h-[400px] overflow-hidden'>
+                            <img className="w-full h-full object-cover" src={about02} alt="About_02" />
+                        </div>
                         <div className='py-5'>
                             {/* <h2 className="text-[3vw] font-bold mb-4 font-magnetik-extrabold">Welcome to the home of CreativeContent!</h2> */}
                             <div className='font-magnetik-extralight text-[1rem] md:text-[1.2rem] lg:text-[1.4rem]'>

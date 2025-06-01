@@ -78,3 +78,16 @@ html {
 .font-magnetik-extralight {
   font-family: 'Magnetik-ExtraLight';
 }
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+.animate-jump {
+  animation: jump 1s ease-in-out infinite;
+}

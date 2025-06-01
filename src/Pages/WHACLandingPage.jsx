@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import homeBanner from "../assets/images/WHACLandingPage/homebanner.jpg";
 import office from "../assets/images/WHACLandingPage/office.jpg";
 import thinkBigger from "../assets/images/WHACLandingPage/thinkbigger.jpg";
@@ -23,9 +23,13 @@ import client_08 from "../assets/images/WHACLandingPage/client_08.png";
 import logo from "../assets/images/WHACLandingPage/logo_white.png";
 import menu from "../assets/images/WHACLandingPage/menu_icon.png";
 import arrow from "../assets/images/WHACLandingPage/arrow.png";
+import scrolldown from "../assets/images/WHACLandingPage/scrolldown.png";
 import Footer from "../Components/Footer";
+import MenuScreen from "../Components/MenuScreen";
 
 export default function WHACLandingPage() {
+
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const works = [
         {
@@ -66,7 +70,7 @@ export default function WHACLandingPage() {
         }
     ]
 
-    const clients = [ client_01, client_02, client_03, client_04, client_05, client_06, client_07, client_08]
+    const clients = [client_01, client_02, client_03, client_04, client_05, client_06, client_07, client_08]
 
     return (
         <div className="bg-black text-white">
@@ -75,11 +79,23 @@ export default function WHACLandingPage() {
                 className="relative h-screen w-full bg-cover bg-center"
                 style={{ backgroundImage: `url(${homeBanner})` }}
             >
-                <div className="flex justify-between items-center w-full h-48 px-5 md:px-15">
-                    <img src={logo} alt="Logo" />
-                    <img src={menu} alt="Menu" />
+                <div className="absolute bottom-5 left-1/2 ms-8 transform -translate-x-1/2 animate-jump">
+                    <img src={scrolldown}  alt="Scroll Down" />
                 </div>
-                {/* <img className="h-full w-full object-cover" src={homeBanner} alt="" /> */}
+                <div className="flex justify-between items-center w-full h-48 px-5 md:px-15">
+                    <img src={logo} alt="Logo" className="w-40 md:w-60 lg:w-70" />
+                    <img
+                        src={menu}
+                        alt="Menu"
+                        onClick={() => setMenuOpen(!menuOpen)}
+                        className={`cursor-pointer transition-transform duration-300 w-10 md:w-15 lg:w-16 ${menuOpen ? 'rotate-180' : ''
+                            }`}
+                    />
+                </div>
+
+                {menuOpen && (
+                    <MenuScreen setMenuOpen={setMenuOpen} />
+                )}
             </section>
 
             {/* About Section */}
@@ -123,7 +139,7 @@ export default function WHACLandingPage() {
             </section>
 
             {/* Work Section */}
-            <section className="bg-white text-black pt-25 flex flex-col md:flex-row">
+            <section id="our-works" className="bg-white text-black pt-25 flex flex-col md:flex-row">
                 <div>
                     <h3 className="font-magnetik-extrabold text-[5vw] md:text-[3vw] font-bold mb-8 md:rotate-270 md:mt-5 px-10 text-center md:text-left">Work.</h3>
                 </div>
@@ -165,7 +181,7 @@ export default function WHACLandingPage() {
                 </div>
             </section>
 
-           <Footer />
+            <Footer />
         </div>
     );
 }
