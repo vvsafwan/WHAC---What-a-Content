@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import about01 from '../assets/images/About/about01.png'
 import about02 from '../assets/images/About/about02.png'
 import client_01 from "../assets/images/WHACLandingPage/client_01.png";
@@ -11,21 +11,14 @@ import client_07 from "../assets/images/WHACLandingPage/client_07.png";
 import client_08 from "../assets/images/WHACLandingPage/client_08.png";
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
-import MenuScreen from '../Components/MenuScreen';
 
 export default function About() {
-
-    const [menuOpen, setMenuOpen] = useState(false);
 
     const clients = [client_01, client_02, client_03, client_04, client_05, client_06, client_07, client_08]
 
     return (
         <div className="font-sans text-gray-900">
-            <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-
-            {menuOpen && (
-                <MenuScreen setMenuOpen={setMenuOpen} />
-            )}
+            <Navbar />
 
             <section>
                 <div className="bg-white text-black py-10 flex flex-col md:flex-row px-5 md:px-0">
@@ -38,7 +31,7 @@ export default function About() {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 w-full px-5 gap-10">
                             <div>
-                                <div className='font-magnetik-extralight text-[1rem] md:text-[1.2rem] lg:text-[1.4rem]'>
+                                <div className='font-magnetik-light text-[1rem] md:text-[1.2rem] lg:text-[1.4rem]'>
                                     <p className="py-5">
                                         At WHAC, we believe everything begins with content. It’s the voice behind every brand, the emotion behind every message, and the fuel for every digital experience.
                                     </p>
@@ -63,7 +56,7 @@ export default function About() {
                         </div>
                         <div className='py-5'>
                             {/* <h2 className="text-[3vw] font-bold mb-4 font-magnetik-extrabold">Welcome to the home of CreativeContent!</h2> */}
-                            <div className='font-magnetik-extralight text-[1rem] md:text-[1.2rem] lg:text-[1.4rem]'>
+                            <div className='font-magnetik-light text-[1rem] md:text-[1.2rem] lg:text-[1.4rem]'>
                                 <p className="mb-4">
                                     From social media to campaigns and brand narratives, we design content ecosystems that are as purposeful as they are powerful. We help businesses find their voice—and then make sure it’s heard, loud and clear.
                                 </p>

@@ -26,10 +26,12 @@ import arrow from "../assets/images/WHACLandingPage/arrow.png";
 import scrolldown from "../assets/images/WHACLandingPage/scrolldown.png";
 import Footer from "../Components/Footer";
 import MenuScreen from "../Components/MenuScreen";
+import { useNavigate } from "react-router";
 
 export default function WHACLandingPage() {
 
     const [menuOpen, setMenuOpen] = useState(false);
+    const navigate = useNavigate();
 
     const works = [
         {
@@ -70,7 +72,11 @@ export default function WHACLandingPage() {
         }
     ]
 
-    const clients = [client_01, client_02, client_03, client_04, client_05, client_06, client_07, client_08]
+    const clients = [client_01, client_02, client_03, client_04, client_05, client_06, client_07, client_08];
+
+    const handleWorkClick = (index) => {
+        navigate(`/content/${index}`);
+    }
 
     return (
         <div className="bg-black text-white">
@@ -148,6 +154,7 @@ export default function WHACLandingPage() {
                         <div
                             key={index}
                             className="overflow-hidden w-full h-full px-10 md:px-0 pt-2 md:pt-0 hover:opacity-80 cursor-pointer"
+                            onClick={() => handleWorkClick(index)}
                         >
                             <div className="bg-gray-300 hover:scale-105 transition-all ease-in-out duration-300">
                                 <img

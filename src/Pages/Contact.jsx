@@ -1,20 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import { IoIosArrowForward } from "react-icons/io";
-import MenuScreen from '../Components/MenuScreen';
 
 export default function Contact() {
-
-    const [menuOpen, setMenuOpen] = useState(false);
-
     return (
         <div>
-            <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-
-            {menuOpen && (
-                <MenuScreen setMenuOpen={setMenuOpen} />
-            )}
+            <Navbar  />
 
             {/* Content Section */}
             <section className="w-10/12 md:w-9/12 lg:w-8/12 py-12 mx-auto">
@@ -22,7 +14,7 @@ export default function Contact() {
                     <div className="w-full md:w-1/2">
                         <h2 className="text-[3rem] md:text-[4rem] font-bold mb-6 font-magnetik-extrabold">Let’s Talk</h2>
                     </div>
-                    <div className="mb-6 w-full md:w-1/2 font-magnetik-extralight text-[1rem] md:text-[1.2rem] lg:text-[1.3rem]">
+                    <div className="mb-6 w-full md:w-1/2 font-magnetik-light text-[1rem] md:text-[1.2rem] lg:text-[1.3rem]">
                         <p className="mb-4">Have a story to tell? <br /> We’d love to help you shape it.</p>
                         <p className="mb-4">
                             Whether you’re starting something new or refining something great, let’s talk content, strategy, and everything in between.
@@ -40,11 +32,11 @@ export default function Contact() {
                 <div className="grid md:grid-cols-2 gap-12">
                     <div className='text-[1rem] md:text-[1.2rem] lg:text-[1.3rem] mt-5'>
                         <h3 className="font-magnetik-extrabold">WHAC Creative Agency</h3>
-                        <p className='font-magnetik-extralight'>Beach Rd, opp. Lions Park<br />
+                        <p className='font-magnetik-light'>Beach Rd, opp. Lions Park<br />
                             Vellayil, Kozhikode,<br />
                             Kerala 673032
                         </p>
-                        <p className="mt-4 font-magnetik-extralight">
+                        <p className="mt-4 font-magnetik-light">
                             +91 96678 24808<br />
                             +91 97468 88251
                         </p>
@@ -53,7 +45,7 @@ export default function Contact() {
                         <div className='flex items-center justify-between p-4 hover:bg-gray-100 transition-all duration-300 cursor-pointer border-b border-gray-400'>
                             <div className='text-[1rem] md:text-[1.2rem] lg:text-[1.3rem]'>
                                 <p className='font-magnetik-extrabold'>General Enquiries</p>
-                                <p className='font-magnetik-extralight'>info@whatacoconut.net</p>
+                                <p className='font-magnetik-light'>info@whatacoconut.net</p>
                             </div>
                             <div>
                                 {/* <img src={arrow} alt="Arrow" /> */}
@@ -63,7 +55,7 @@ export default function Contact() {
                         <div className='flex items-center justify-between px-4 py-2 hover:bg-gray-100 transition-all duration-300 cursor-pointer border-b border-gray-400'>
                             <div className='text-[1rem] md:text-[1.2rem] lg:text-[1.3rem]'>
                                 <p className='font-magnetik-extrabold'>General Enquiries</p>
-                                <p className='font-magnetik-extralight'>muneeb@whatacoconut.net</p>
+                                <p className='font-magnetik-light'>muneeb@whatacoconut.net</p>
                             </div>
                             <div>
                                 {/* <img src={arrow} alt="Arrow" /> */}
@@ -73,7 +65,7 @@ export default function Contact() {
                         <div className='flex items-center justify-between p-4 hover:bg-gray-100 transition-all duration-300 cursor-pointer'>
                             <div className='text-[1rem] md:text-[1.2rem] lg:text-[1.3rem]'>
                                 <p className='font-magnetik-extrabold'>PR</p>
-                                <p className='font-magnetik-extralight'>muhammedali@whatacoconut.net</p>
+                                <p className='font-magnetik-light'>muhammedali@whatacoconut.net</p>
                             </div>
                             <div>
                                 {/* <img src={arrow} alt="Arrow" /> */}

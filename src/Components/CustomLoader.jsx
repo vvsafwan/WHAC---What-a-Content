@@ -1,6 +1,6 @@
 // CustomLoader.jsx
 import React from 'react';
-import favicon from '../../public/favicon.ico';
+import favicon from '/favicon.ico';
 
 const CustomLoader = () => {
   return (

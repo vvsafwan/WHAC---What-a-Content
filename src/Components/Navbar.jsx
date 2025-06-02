@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../assets/images/WHACLandingPage/logo_white.png'
 import menu from '../assets/images/WHACLandingPage/menu_icon.png'
+import MenuScreen from './MenuScreen';
 
-export default function Navbar({ menuOpen, setMenuOpen }) {
+export default function Navbar() {
+
+    const [menuOpen, setMenuOpen] = useState(false);
     const handleMenuClick = () => {
         setMenuOpen(true);
     };
@@ -16,6 +19,10 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
                 alt="Menu Icon"
                 onClick={handleMenuClick}
             />
+
+            {menuOpen && (
+                <MenuScreen setMenuOpen={setMenuOpen} />
+            )}
 
         </div>
 
