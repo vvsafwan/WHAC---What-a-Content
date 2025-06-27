@@ -85,11 +85,11 @@ export default function WHACLandingPage() {
                 className="relative h-screen w-full bg-cover bg-center"
                 style={{ backgroundImage: `url(${homeBanner})` }}
             >
-                <div className="absolute bottom-5 left-1/2 ms-8 transform -translate-x-1/2 animate-jump">
-                    <img src={scrolldown}  alt="Scroll Down" />
+                <div className="absolute bottom-15 left-1/2 ms-8 transform -translate-x-1/2 animate-jump">
+                    <img src={scrolldown}  alt="Scroll Down" className="w-8 sm:w-12 md:w-15" />
                 </div>
                 <div className="flex justify-between items-center w-full h-48 px-5 md:px-15">
-                    <img src={logo} alt="Logo" className="w-40 md:w-60 lg:w-70" />
+                    <img src={logo} alt="Logo" className="w-40 md:w-60 lg:w-70" onClick={() => navigate('/')} />
                     <img
                         src={menu}
                         alt="Menu"
@@ -140,7 +140,7 @@ export default function WHACLandingPage() {
                     <p>We hire big talent and bring them big opportunities that build boundless careers.</p>
                     <br />
                     <p>Want to Do Content That Matters?</p>
-                    <button className="border-3 border-white py-4 px-20 md:px-10 lg:px-20 mt-10 rounded-full font-magnetik-semibold hover:bg-white hover:text-black hover:scale-105 transition-all ease-in-out duration-300 hover:cursor-pointer text-[1rem] lg:text-[1.5rem]">CONTACT US</button>
+                    <button className="border-3 border-white py-4 px-20 md:px-10 lg:px-20 mt-10 rounded-full font-magnetik-semibold hover:bg-white hover:text-black hover:scale-105 transition-all ease-in-out duration-300 hover:cursor-pointer text-[1rem] lg:text-[1.5rem]" onClick={() => navigate('/contact')}>CONTACT US</button>
                 </div>
             </section>
 

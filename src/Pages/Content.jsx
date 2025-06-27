@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from '../Components/Footer'
 import Navbar from '../Components/Navbar'
 import work1 from '../assets/images/Content/W01/fha01.jpg';
@@ -10,12 +10,31 @@ import work6 from '../assets/images/Content/W01/fha06.jpg';
 import work7 from '../assets/images/Content/W01/fha07.jpg';
 import work8 from '../assets/images/Content/W01/fha08.jpg';
 import ScrollGallery from '../Components/ScrollGallery';
+import { useParams } from 'react-router';
+import { getWorkById } from '../data/workData';
 
 export default function Content() {
 
+    const { id } = useParams();
+    const [data, setData] = useState({
+        title: '',
+        subtitle: '',
+        content1: '',
+        content2: '',
+        image1: [],
+        image2: []
+    });
+
     useEffect(() => {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
+        fetchWorkById(id);
     }, [])
+
+    const fetchWorkById = async(id) => {
+        const data = await getWorkById(id);
+        setData(data);
+        console.log(data)
+    }
 
     return (
         <div>
@@ -24,13 +43,13 @@ export default function Content() {
             {/* Introduction */}
             <div className='w-full md:w-8/12 mx-auto md:flex py-10 md:py-30 text-[1rem] md:text-[1.2rem] lg:text-[1.3rem] gap-10'>
                 <div className='w-full md:w-[30%] px-10 md:px-0'>
-                    <p className='font-magnetik-extrabold'>Futureace Healthcare Academy</p>
+                    <p className='font-magnetik-extrabold'>{data?.title}</p>
                     <br />
-                    <p className='font-magnetik-light mb-5'>Education</p>
+                    <p className='font-magnetik-light mb-5'>{data?.subtitle}</p>
                 </div>
                 <div className='w-full md:w-[70%] px-10 md:px-0'>
                     <p className='font-magnetik-light'>
-                        The challenge began with building brand awareness for a newly established healthcare academy. With limited assets and no prior history, launching the campaign was no small task. We started by focusing on brand visibility, gradually expanding into a strong online presence that highlighted the academy's unique selling points. This strategic approach ultimately led to excellent visibility and measurable results.
+                        {data?.content1}
                     </p>
                 </div>
             </div>
@@ -52,7 +71,7 @@ export default function Content() {
                 </div>
             </div> */}
 
-            <ScrollGallery images={[work1, work2, work3, work4]} />
+            <ScrollGallery images={data?.image1} />
 
             {/* Strategy Section */}
             <div className='w-full md:w-8/12 mx-auto md:flex py-20 md:py-30 text-[1rem] md:text-[1.2rem] lg:text-[1.3rem] gap-10'>
@@ -61,18 +80,13 @@ export default function Content() {
                 </div>
                 <div className='w-full md:w-[70%] px-10 md:px-0'>
                     <p className='font-magnetik-light'>
-                        A key focus of our strategy was creating impactful social content that
-                        resonated with the target audience. From informative posts and engaging
-                        visuals to student testimonials and expert insights, every piece was
-                        crafted to build trust and community. By maintaining a consistent voice
-                        and showcasing the academy’s values, we turned their social media
-                        channels into a hub of credibility, engagement, and growth.
+                        {data?.content2}
                     </p>
                 </div>
             </div>
 
             {/* Image Row 2 */}
-            <ScrollGallery images={[work5, work6, work7, work8]} />
+            <ScrollGallery images={data?.image2} />
 
             <Footer />
         </div>
