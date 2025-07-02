@@ -54,23 +54,6 @@ export default function Content() {
                 </div>
             </div>
 
-            {/* Image Row 1 */}
-            {/* <div className="grid grid-cols-1 md:grid-cols-3 pb-8">
-                <img src={work1} alt="Kochi Image 1" className="w-full h-full object-cover" />
-                <img src={work2} alt="Kochi Image 2" className="w-full" />
-                <img src={work3} alt="Kochi Image 3" className="w-full" />
-                <img src={work4} alt="Kochi Image 4" className="w-full" />
-            </div> */}
-
-            {/* <div className="overflow-x-auto pb-8 no-scrollbar">
-                <div className="flex w-max">
-                    <img src={work1} alt="Kochi Image 1" className="w-[full] h-[550px] object-cover flex-shrink-0" />
-                    <img src={work2} alt="Kochi Image 2" className="w-[full] h-[550px] object-cover flex-shrink-0" />
-                    <img src={work3} alt="Kochi Image 3" className="w-[full] h-[550px] object-cover flex-shrink-0" />
-                    <img src={work4} alt="Kochi Image 4" className="w-[full] h-[550px] object-cover flex-shrink-0" />
-                </div>
-            </div> */}
-
             <ScrollGallery images={data?.image1} />
 
             {/* Strategy Section */}

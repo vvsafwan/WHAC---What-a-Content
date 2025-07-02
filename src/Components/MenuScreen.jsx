@@ -8,7 +8,7 @@ import {
     FaLinkedinIn,
     FaYoutube
 } from "react-icons/fa";
-import { HashLink } from 'react-router-hash-link';
+// import { HashLink } from 'react-router-hash-link';
 
 export default function MenuScreen({ setMenuOpen }) {
 
@@ -30,7 +30,8 @@ export default function MenuScreen({ setMenuOpen }) {
                         <Link to={'/about'}>About Us</Link>
                     </div>
                     <div>
-                        <HashLink smooth to="/#our-works" onClick={() => setMenuOpen(false)}>Our Works</HashLink>
+                        {/* <HashLink smooth to="/#our-works" onClick={() => setMenuOpen(false)}>Our Works</HashLink> */}
+                        <Link to={'/works'}>Our Works</Link>
                     </div>
                     <div>
                         <Link to={'/contact'}>Contact Us</Link>

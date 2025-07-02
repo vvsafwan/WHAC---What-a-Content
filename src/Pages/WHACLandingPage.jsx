@@ -3,15 +3,15 @@ import homeBanner from "../assets/images/WHACLandingPage/homebanner.jpg";
 import office from "../assets/images/WHACLandingPage/office.jpg";
 import thinkBigger from "../assets/images/WHACLandingPage/thinkbigger.jpg";
 import interior from "../assets/images/WHACLandingPage/interior.jpg";
-import work_image_01 from "../assets/images/WHACLandingPage/work_image_01.jpg";
-import work_image_02 from "../assets/images/WHACLandingPage/work_image_02.jpg";
-import work_image_03 from "../assets/images/WHACLandingPage/work_image_03.jpg";
-import work_image_04 from "../assets/images/WHACLandingPage/work_image_04.jpg";
-import work_image_05 from "../assets/images/WHACLandingPage/work_image_05.jpg";
-import work_image_06 from "../assets/images/WHACLandingPage/work_image_06.jpg";
-import work_image_07 from "../assets/images/WHACLandingPage/work_image_07.jpg";
-import work_image_08 from "../assets/images/WHACLandingPage/work_image_08.jpg";
-import work_image_09 from "../assets/images/WHACLandingPage/work_image_09.jpg";
+// import work_image_01 from "../assets/images/WHACLandingPage/work_image_01.jpg";
+// import work_image_02 from "../assets/images/WHACLandingPage/work_image_02.jpg";
+// import work_image_03 from "../assets/images/WHACLandingPage/work_image_03.jpg";
+// import work_image_04 from "../assets/images/WHACLandingPage/work_image_04.jpg";
+// import work_image_05 from "../assets/images/WHACLandingPage/work_image_05.jpg";
+// import work_image_06 from "../assets/images/WHACLandingPage/work_image_06.jpg";
+// import work_image_07 from "../assets/images/WHACLandingPage/work_image_07.jpg";
+// import work_image_08 from "../assets/images/WHACLandingPage/work_image_08.jpg";
+// import work_image_09 from "../assets/images/WHACLandingPage/work_image_09.jpg";
 import client_01 from "../assets/images/WHACLandingPage/client_01.png";
 import client_02 from "../assets/images/WHACLandingPage/client_02.png";
 import client_03 from "../assets/images/WHACLandingPage/client_03.png";
@@ -22,61 +22,62 @@ import client_07 from "../assets/images/WHACLandingPage/client_07.png";
 import client_08 from "../assets/images/WHACLandingPage/client_08.png";
 import logo from "../assets/images/WHACLandingPage/logo_white.png";
 import menu from "../assets/images/WHACLandingPage/menu_icon.png";
-import arrow from "../assets/images/WHACLandingPage/arrow.png";
+// import arrow from "../assets/images/WHACLandingPage/arrow.png";
 import scrolldown from "../assets/images/WHACLandingPage/scrolldown.png";
 import Footer from "../Components/Footer";
 import MenuScreen from "../Components/MenuScreen";
 import { useNavigate } from "react-router";
+import WorkSection from "../Components/WorkSection";
 
 export default function WHACLandingPage() {
 
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
 
-    const works = [
-        {
-            title: "Futureace Hospital Academy",
-            image: work_image_01
-        },
-        {
-            title: "Flufftopia: Cotton Candy",
-            image: work_image_02
-        },
-        {
-            title: "Seaman Tours: Your Travel Partner",
-            image: work_image_03
-        },
-        {
-            title: "FALAQ: Coaching Centre",
-            image: work_image_04
-        },
-        {
-            title: "WIC: Arts & Science College",
-            image: work_image_05
-        },
-        {
-            title: "Mamma Mimmo's: The Kids Store",
-            image: work_image_06
-        },
-        {
-            title: "Serene Minds: Psychiatric Hospital",
-            image: work_image_07
-        },
-        {
-            title: "Grace Public School",
-            image: work_image_08
-        },
-        {
-            title: "Wandoor Islamic College",
-            image: work_image_09
-        }
-    ]
+    // const works = [
+    //     {
+    //         title: "Futureace Hospital Academy",
+    //         image: work_image_01
+    //     },
+    //     {
+    //         title: "Flufftopia: Cotton Candy",
+    //         image: work_image_02
+    //     },
+    //     {
+    //         title: "Seaman Tours: Your Travel Partner",
+    //         image: work_image_03
+    //     },
+    //     {
+    //         title: "FALAQ: Coaching Centre",
+    //         image: work_image_04
+    //     },
+    //     {
+    //         title: "WIC: Arts & Science College",
+    //         image: work_image_05
+    //     },
+    //     {
+    //         title: "Mamma Mimmo's: The Kids Store",
+    //         image: work_image_06
+    //     },
+    //     {
+    //         title: "Serene Minds: Psychiatric Hospital",
+    //         image: work_image_07
+    //     },
+    //     {
+    //         title: "Grace Public School",
+    //         image: work_image_08
+    //     },
+    //     {
+    //         title: "Wandoor Islamic College",
+    //         image: work_image_09
+    //     }
+    // ]
 
     const clients = [client_01, client_02, client_03, client_04, client_05, client_06, client_07, client_08];
 
-    const handleWorkClick = (index) => {
-        navigate(`/content/${index}`);
-    }
+    // const handleWorkClick = (index) => {
+    //     navigate(`/content/${index}`);
+    // }
 
     return (
         <div className="bg-black text-white">
@@ -145,7 +146,7 @@ export default function WHACLandingPage() {
             </section>
 
             {/* Work Section */}
-            <section id="our-works" className="bg-white text-black pt-25 flex flex-col md:flex-row">
+            {/* <section id="our-works" className="bg-white text-black pt-25 flex flex-col md:flex-row">
                 <div>
                     <h3 className="font-magnetik-extrabold text-[5vw] md:text-[3vw] font-bold mb-8 md:rotate-270 md:mt-5 px-10 text-center md:text-left">Work.</h3>
                 </div>
@@ -172,7 +173,9 @@ export default function WHACLandingPage() {
                         </div>
                     ))}
                 </div>
-            </section>
+            </section> */}
+
+            <WorkSection />
 
             {/* Network Section */}
             <section className="bg-white text-black py-30 flex flex-col md:flex-row">

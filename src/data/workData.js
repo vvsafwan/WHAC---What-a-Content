@@ -72,8 +72,26 @@ import sm08 from '../assets/images/Content/W07/Layer 66.jpg';
 import sm09 from '../assets/images/Content/W07/Layer 67.jpg';
 import sm10 from '../assets/images/Content/W07/Layer 68.jpg';
 
-// Afiya Centre (images not provided yet)
-// WHAC Branding (images not provided yet)
+//grace
+import gps01 from '../assets/images/Content/W08/gps01.jpg';
+import gps02 from '../assets/images/Content/W08/gps02.jpg';
+import gps03 from '../assets/images/Content/W08/gps03.jpg';
+import gps04 from '../assets/images/Content/W08/gps04.jpg';
+import gps05 from '../assets/images/Content/W08/gps05.jpg';
+import gps06 from '../assets/images/Content/W08/gps06.jpg';
+import gps07 from '../assets/images/Content/W08/gps07.jpg';
+import gps08 from '../assets/images/Content/W08/gps08.jpg';
+import gps09 from '../assets/images/Content/W08/gps09.jpg';
+
+//wandoor
+import wic011 from '../assets/images/Content/W09/wic01.jpg';
+import wic022 from '../assets/images/Content/W09/wic02.jpg';
+import wic033 from '../assets/images/Content/W09/wic03.jpg';
+import wic044 from '../assets/images/Content/W09/wic04.jpg';
+import wic055 from '../assets/images/Content/W09/wic05.jpg';
+import wic066 from '../assets/images/Content/W09/wic06.jpg';
+import wic077 from '../assets/images/Content/W09/wic07.jpg';
+import wic088 from '../assets/images/Content/W09/wic08.jpg';
 
 export const workData = [
   {
@@ -141,26 +159,25 @@ export const workData = [
   },
   {
     id: 7,
-    title: 'Afiya Centre',
-    subtitle: 'Healthcare',
-    content1: "We worked closely with Afiya Centre, a healthcare brand, to strengthen their social media footprint and establish a sense of trust and credibility online. The initial focus was on crafting a clean and reliable brand identity—aligned with the values of care, compassion, and professionalism. Once that foundation was set, we moved into building a thoughtful content strategy that informed, educated, and reassured the audience.",
-    content2: "By consistently publishing content around wellness tips, health awareness, doctor spotlights, and patient experiences, we created a compelling and authoritative presence. The results were evident through better audience connection, increased engagement, and a stronger association of the brand with quality care.",
-    image1: [],
-    image2: [],
+    title: 'Grace Public School',
+    subtitle: 'Education',
+    content1: "We collaborated with Grace school to completely revamp its brand identity and reposition it in line with its evolving educational vision. From redesigning the logo, colors, and typography to setting a new tone of communication, we built a cohesive identity that reflected the school's values—academic excellence, inclusivity, and future-readiness. The new visual language was extended across digital and physical touchpoints, including uniforms, signage, and internal communication materials.",
+    content2: "To reinforce this refreshed positioning, we launched a series of strategic social media campaigns that highlighted student achievements, campus life, and the school’s holistic approach to learning. The modernized look and consistent messaging helped the school stand out in a competitive education space, resulting in increased engagement, stronger community perception, and a noticeable rise in admission inquiries.",
+    image1: [gps01, gps02, gps03, gps04, gps05],
+    image2: [gps06, gps07, gps08, gps09],
   },
   {
     id: 8,
-    title: 'WHAC Branding',
-    subtitle: 'Branding',
-    content1: "This is our own story—building WHAC as a creative agency that reflects innovation, reliability, and impact. From defining our own brand DNA to designing a sharp, modern visual identity, we ensured that our brand narrative matched our capabilities. Every element—from the logo to the tone of our communication—was curated to signal trust and creativity.",
-    content2: "As we rolled out our own digital presence, we applied the same principles we offer to our clients: clarity, consistency, and community. Through curated case studies, real-time updates, and behind-the-scenes glimpses, we showcased our journey while building relationships with our audience. This brand-building exercise helped WHAC gain recognition, grow its client base, and stand out as a creative powerhouse.",
-    image1: [],
-    image2: [],
+    title: 'Wandoor Islamic College',
+    subtitle: 'Education',
+    content1: "We partnered with Wandoor Islamic College to revamp and elevate its brand to better reflect its vision, values, and evolving academic environment. Starting with a refreshed brand identity and tone—we created a cohesive visual and verbal language that positioned the institution as modern, student-focused, and future-ready. This transformation was extended across every touchpoint, ensuring consistency from internal materials to the school’s digital presence.",
+    content2: "To enhance visibility and engagement, we executed a series of social media campaigns that brought the new identity to life. By highlighting student stories, academic milestones, campus culture, and value-driven messaging, we reshaped the institution’s online perception. The result was a stronger, more relatable brand with increased community engagement and a noticeable uplift in reputation and admissions interest.",
+    image1: [wic011, wic022, wic033, wic044],
+    image2: [wic055, wic066, wic077, wic088],
   }
 ];
 
 export const getWorkById = (id) => {
   const data = workData.find(work => work.id === Number(id));
-  console.log(data, id);
   return data;
 };
