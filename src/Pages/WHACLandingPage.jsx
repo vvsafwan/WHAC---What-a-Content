@@ -190,7 +190,7 @@ export default function WHACLandingPage() {
                 </div>
 
                 {/* Scroll Down */}
-                <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 animate-jump z-20">
+                <div className="absolute bottom-5 left-[50%] transform -translate-x-1/2 animate-jump z-20">
                     <img src={scrolldown} alt="Scroll Down" className="w-8 sm:w-12 md:w-15 lg:w-18" />
                 </div>
 
