@@ -29,7 +29,8 @@ import MenuScreen from "../Components/MenuScreen";
 import { useNavigate } from "react-router";
 import WorkSection from "../Components/WorkSection";
 import video from '../assets/images/WHACLandingPage/video.mp4';
-import mask from '../assets/images/WHACLandingPage/mask.png';
+// import mask from '../assets/images/WHACLandingPage/mask.png';
+import mask2 from '../assets/images/WHACLandingPage/mask2.svg';
 
 export default function WHACLandingPage() {
 
@@ -107,7 +108,7 @@ export default function WHACLandingPage() {
                 )}
             </section> */}
 
-            {/* <section className="relative h-screen w-full overflow-hidden">
+            <section className="relative h-screen w-full overflow-hidden">
                 <video
                     className="absolute top-0 left-0 w-full h-full object-cover z-0"
                     autoPlay
@@ -120,7 +121,7 @@ export default function WHACLandingPage() {
                 </video>
 
                 <img
-                    src={mask}
+                    src={mask2}
                     alt="Overlay Mask"
                     className="absolute top-0 left-0 w-full h-full object-cover z-10"
                 />
@@ -142,63 +143,12 @@ export default function WHACLandingPage() {
                     />
                 </div>
 
-                <div className="absolute bottom-15 left-1/2 transform -translate-x-1/2 animate-jump z-20">
+                <div className="absolute bottom-15 left-[50%] transform -translate-x-1/2 animate-jump z-20">
                     <img src={scrolldown} alt="Scroll Down" className="w-8 sm:w-12 md:w-15" />
                 </div>
 
                 {menuOpen && <MenuScreen setMenuOpen={setMenuOpen} />}
-            </section> */}
-
-            <section className="relative w-full h-fit max-h-screen overflow-hidden flex items-center justify-center bg-black">
-                {/* Shared wrapper */}
-                <div className="relative w-full h-full flex items-center justify-center">
-                    {/* Video */}
-                    <video
-                        className="relative z-0 w-full h-full object-contain"
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                    >
-                        <source src={video} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-
-                    {/* Mask Image */}
-                    <img
-                        src={mask}
-                        alt="Overlay Mask"
-                        className="absolute top-0 left-0 w-full h-full object-contain z-10 pointer-events-none"
-                    />
-                </div>
-
-                {/* Header Bar */}
-                <div className="absolute top-0 left-0 w-full flex justify-between items-center px-5 md:px-15 h-20 md:h-30 lg:h-40 z-20">
-                    <img
-                        src={logo}
-                        alt="Logo"
-                        className="w-40 md:w-60 lg:w-70"
-                        onClick={() => navigate('/')}
-                    />
-                    <img
-                        src={menu}
-                        alt="Menu"
-                        onClick={() => setMenuOpen(!menuOpen)}
-                        className={`cursor-pointer transition-transform duration-300 w-10 md:w-15 lg:w-16 ${menuOpen ? 'rotate-180' : ''
-                            }`}
-                    />
-                </div>
-
-                {/* Scroll Down */}
-                <div className="absolute bottom-5 left-[50%] transform -translate-x-1/2 animate-jump z-20">
-                    <img src={scrolldown} alt="Scroll Down" className="w-8 sm:w-12 md:w-15 lg:w-18" />
-                </div>
-
-                {/* Menu */}
-                {menuOpen && <MenuScreen setMenuOpen={setMenuOpen} />}
             </section>
-
-
 
 
             {/* About Section */}
