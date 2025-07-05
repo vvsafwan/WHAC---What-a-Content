@@ -18,10 +18,10 @@ export default function Footer() {
                 <div>
                     <p className="font-magnetik-semibold text-lg mb-5 text-center md:text-left">CONNECT</p>
                     <div className="flex space-x-4 mt-4 md:mt-0">
-                        <a className="border border-white p-3 rounded-full" href="#"><FaInstagram /></a>
-                        <a className="border border-white p-3 rounded-full" href="#"><FaFacebookF /></a>
-                        <a className="border border-white p-3 rounded-full" href="#"><FaLinkedinIn /></a>
-                        <a className="border border-white p-3 rounded-full" href="#"><FaYoutube /></a>
+                        <a className="border border-white p-3 rounded-full" target='_blank' href="https://www.instagram.com/what.a_content?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><FaInstagram /></a>
+                        <a className="border border-white p-3 rounded-full" target='_blank' href="https://www.facebook.com/profile.php?id=61574158830016"><FaFacebookF /></a>
+                        <a className="border border-white p-3 rounded-full" target='_blank' href="https://www.linkedin.com/company/107503856/admin/dashboard/"><FaLinkedinIn /></a>
+                        <a className="border border-white p-3 rounded-full" target='_blank' href="https://www.youtube.com/@WHACwhatacontent"><FaYoutube /></a>
                     </div>
                 </div>
             </div>

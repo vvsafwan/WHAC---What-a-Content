@@ -126,7 +126,7 @@ export default function WHACLandingPage() {
                     className="absolute top-0 left-0 w-full h-full object-cover z-10"
                 />
 
-                <div className="relative z-20 flex justify-between items-center w-full h-48 px-5 md:px-15">
+                <div className="relative z-20 flex justify-between items-center w-full h-30 px-5 md:px-15">
                     <img
                     src={logo}
                     alt="Logo"
@@ -143,7 +143,7 @@ export default function WHACLandingPage() {
                     />
                 </div>
 
-                <div className="absolute bottom-15 left-[50%] transform -translate-x-1/2 animate-jump z-20">
+                <div className="absolute bottom-15 left-[55%] md:left-[50%] transform -translate-x-1/2 animate-jump z-20">
                     <img src={scrolldown} alt="Scroll Down" className="w-8 sm:w-12 md:w-15" />
                 </div>
 
