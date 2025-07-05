@@ -28,6 +28,8 @@ import Footer from "../Components/Footer";
 import MenuScreen from "../Components/MenuScreen";
 import { useNavigate } from "react-router";
 import WorkSection from "../Components/WorkSection";
+import video from '../assets/images/WHACLandingPage/video.mp4';
+import mask from '../assets/images/WHACLandingPage/mask.png';
 
 export default function WHACLandingPage() {
 
@@ -82,9 +84,9 @@ export default function WHACLandingPage() {
     return (
         <div className="bg-black text-white">
             {/* Hero Section */}
-            <section
+            {/* <section
                 className="relative h-screen w-full bg-cover bg-center"
-                style={{ backgroundImage: `url(${homeBanner})` }}
+                // style={{ backgroundImage: `url(${homeBanner})` }}
             >
                 <div className="absolute bottom-15 left-1/2 ms-8 transform -translate-x-1/2 animate-jump">
                     <img src={scrolldown}  alt="Scroll Down" className="w-8 sm:w-12 md:w-15" />
@@ -103,7 +105,101 @@ export default function WHACLandingPage() {
                 {menuOpen && (
                     <MenuScreen setMenuOpen={setMenuOpen} />
                 )}
+            </section> */}
+
+            {/* <section className="relative h-screen w-full overflow-hidden">
+                <video
+                    className="absolute top-0 left-0 w-full h-full object-cover z-0"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                >
+                    <source src={video} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+
+                <img
+                    src={mask}
+                    alt="Overlay Mask"
+                    className="absolute top-0 left-0 w-full h-full object-cover z-10"
+                />
+
+                <div className="relative z-20 flex justify-between items-center w-full h-48 px-5 md:px-15">
+                    <img
+                    src={logo}
+                    alt="Logo"
+                    className="w-40 md:w-60 lg:w-70"
+                    onClick={() => navigate('/')}
+                    />
+                    <img
+                    src={menu}
+                    alt="Menu"
+                    onClick={() => setMenuOpen(!menuOpen)}
+                    className={`cursor-pointer transition-transform duration-300 w-10 md:w-15 lg:w-16 ${
+                        menuOpen ? 'rotate-180' : ''
+                    }`}
+                    />
+                </div>
+
+                <div className="absolute bottom-15 left-1/2 transform -translate-x-1/2 animate-jump z-20">
+                    <img src={scrolldown} alt="Scroll Down" className="w-8 sm:w-12 md:w-15" />
+                </div>
+
+                {menuOpen && <MenuScreen setMenuOpen={setMenuOpen} />}
+            </section> */}
+
+            <section className="relative w-full h-fit max-h-screen overflow-hidden flex items-center justify-center bg-black">
+                {/* Shared wrapper */}
+                <div className="relative w-full h-full flex items-center justify-center">
+                    {/* Video */}
+                    <video
+                        className="relative z-0 w-full h-full object-contain"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                    >
+                        <source src={video} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+
+                    {/* Mask Image */}
+                    <img
+                        src={mask}
+                        alt="Overlay Mask"
+                        className="absolute top-0 left-0 w-full h-full object-contain z-10 pointer-events-none"
+                    />
+                </div>
+
+                {/* Header Bar */}
+                <div className="absolute top-0 left-0 w-full flex justify-between items-center px-5 md:px-15 h-20 md:h-30 lg:h-40 z-20">
+                    <img
+                        src={logo}
+                        alt="Logo"
+                        className="w-40 md:w-60 lg:w-70"
+                        onClick={() => navigate('/')}
+                    />
+                    <img
+                        src={menu}
+                        alt="Menu"
+                        onClick={() => setMenuOpen(!menuOpen)}
+                        className={`cursor-pointer transition-transform duration-300 w-10 md:w-15 lg:w-16 ${menuOpen ? 'rotate-180' : ''
+                            }`}
+                    />
+                </div>
+
+                {/* Scroll Down */}
+                <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 animate-jump z-20">
+                    <img src={scrolldown} alt="Scroll Down" className="w-8 sm:w-12 md:w-15 lg:w-18" />
+                </div>
+
+                {/* Menu */}
+                {menuOpen && <MenuScreen setMenuOpen={setMenuOpen} />}
             </section>
+
+
+
 
             {/* About Section */}
             <section className="w-full min-h-screen max-h-fit bg-[#00001A] px-5 md:px-15 py-20 flex gap-10 justify-center items-center flex-col md:flex-row">
